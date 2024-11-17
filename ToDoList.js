@@ -7,10 +7,12 @@ function AddTask(){
     const input=document.createElement("input");
     input.innerText=input;
     input.style.fontSize="2vw";
+    input.style.width="10wv";
     const completeBtn=document.createElement("button");
     completeBtn.innerHTML='<i class="fa-regular fa-circle-check"></i>';
     completeBtn.addEventListener("click",()=>{
         completeBtn.parentElement.remove();
+        cnt=cnt-1;
     })
     const but1=document.createElement("button");
     but1.innerHTML='<i class="fa-solid fa-circle-xmark"></i>';
