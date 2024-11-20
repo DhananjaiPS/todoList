@@ -205,10 +205,15 @@
 
         .box {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-evenly;
+            align-items: center;
             border: 2px solid rgb(0, 0, 0);
-            width: 35vw;
-            min-height: 4vw;
+            width: 40vw;
+            background-color: white;
+
+           
+
+            min-height: 5vw;
             align-items: center;
             margin-bottom: 5px;
             font-size: 2.8vw;
@@ -217,6 +222,7 @@
 
 
         }
+        
 
         .box button {
             background-color: transparent; 
@@ -241,47 +247,54 @@
 
         }
         
-         /* .btn {background-image: linear-gradient(to right, #ff6e7f 0%, #bfe9ff  51%, #ff6e7f  100%)} */
          .btn {
             padding: 15px;
             background-color:rgb(168, 10, 208) ;
             min-width: 20vw;
             font-size: 2vw;
             color: white;
-            border: none;
+            max-height: 4vh;
+
+
+            /* border: none; */
             border-radius: 15px;
 
-
-            /* margin: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            align-self: center;
-            /* height: 7vw; */
-            /* padding-bottom: 20px;
-
-
-            padding: 15px;
-            background-color: rgb(168, 10, 208);
-           
-            
-            transition: 0.5s;
-           
-            color: white;            
-            box-shadow: 0 0 20px #eee;
-            border-radius: 10px;
-            display: block;
-            border: none;
-            
-            font-size: 2vw;
-            border-radius: 20px; */ 
-            
           }
 
           .btn:hover {
             background-color: rgb(255, 59, 193);
             color: #fff;
             text-decoration: none;
+          }
+          #inputtext{
+                width:25vw;
+                height: 4.3vw;
+                padding: 3vw;
+                font-size: 2.2vw;
+
+
+          }
+          .s1{
+            background-color: aquamarine;
+            width: 10%;
+            display: flex;
+            justify-content: center;
+          }
+          .s2{
+            background-color: blueviolet;
+            width: 60%;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+          }
+          .b1{
+            background-color: brown;
+            width: 15%;
+          }
+          .b2{
+            background-color: coral;
+            width: 15%;
+
           }
           
         
@@ -299,13 +312,16 @@
         <div class="main1">
 
             <div id="box-main">
+
                 <!-- <img src="metor.svg" height="45vw"  alt="metor_logo"> -->
                  <div class="head">
 
-                     <h3 style="word-spacing: 15px;font-size: 3vw;">To do lists</h3>
+                     <!-- <h3 style="word-spacing: 15px;font-size: 3vw;">To do lists</h3> -->
+                      <input type="text" id="inputtext">
                      <!-- <input type="text" id="inputValue"> -->
                      <button onclick="AddTask()" class="btn">Add task</button>
                  </div>
+                <!-- <input type="input" id="in1"> -->
 
 
 
@@ -317,13 +333,13 @@
 
 
 
-                <!-- <div class="box">
-                    <span>1</span>
-                    <span>Gym</span>
-                    <button><i class="fa-solid fa-circle-xmark"></i></button>
-                    <button><i class="fa-solid fa-circle-xmark"></i></button>
+                <div class="box">
+                    <span class="s1">1</span>
+                    <span class="s2">Gym</span>
+                    <button class="b1"><i class="fa-solid fa-circle-xmark"></i></button>
+                    <button class="b2"><i class="fa-solid fa-circle-xmark"></i></button>
 
-                </div> -->
+                </div>
                 <!-- <div class="box">
                     <span>2</span>
                     <span>hello</span>
@@ -336,12 +352,11 @@
 
         </div>
         <div class="main2">
-            <div class="box1"></div>
+            <div class="box1" style="text-decoration: line-through;"></div>
             <div class="box2"></div>
-            <div class="box3">
-
-            </div>
+            <div class="box3">dhananjai</div>
         </div>
+        
 
 
     </div>
