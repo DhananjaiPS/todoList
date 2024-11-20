@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>to DoList</h1>
+    <input type="text" id="input">
+    <button id="btn1">Add task</button>
+    <div class="todolist"></div>
+</body>
+<script>
+
+    const btn = document.getElementById("btn1");
+    btn.addEventListener("click", () => {
+        const inputValue = document.getElementById("input").value;
+
+        console.log(inputValue);
+       
+        const alllist = localStorage.getItem("taskId");
+        console.log(alllist);
+        let obj;
+        if (alllist == null) {
+            obj = {};
+            console.log(obj);
+        }
+        else {
+            obj = JSON.parse(alllist);
+            console.log(obj);
+        }
+
+        const timeId = Date.now();
+        // console.log(timeId);
+
+        obj[timeId] = inputValue;
+        // console.log(obj); //print null bcz we didnt set yet by using objstring wecan saveit
+
+
+        const objString = JSON.stringify(obj);
+        // console.log(objString)
+        // console.log(typeof (objString))
+
+        localStorage.setItem("taskId", objString);
+        const todolist=document.getElementsByClassName("todolist")[0];
+        console.log(todolist);
+
+        for (const key in obj){    
+
+                const element = obj[key];
+                
+                const todoitem=document.createElement("div");
+                console.log(inputValue);
+                todoitem.innerHTML=`${inputValue} <button class="btn2">delete</button>`;
+                console.log(todoitem);
+
+                todolist.append(todoitem);             
+            
+        }
+
+    })
+
+
+</script>
+
+</html>
